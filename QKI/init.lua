@@ -174,6 +174,12 @@ local function DrawMainWindow()
         if ImGui.Button("STAHP!!!") then
             mq.cmd('/squelch /multiline ; /end; /afollow off; /stick off; /moveto off; /nav stop; /play off; /mqp on; /attack off; /twist off;')
         end
+
+        ImGui.SameLine()
+
+        if ImGui.Button("Ignore Target") then
+            mq.cmd('/addignore "${Target.CleanName}"')
+        end
     end
     ImGui.End()
 end
