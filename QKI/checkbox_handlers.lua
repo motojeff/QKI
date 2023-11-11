@@ -34,225 +34,282 @@ end
 
 local function ToggleAEMez(isChecked)
     if isChecked then
-        mq.cmd('/mezon 3')
+        mq.cmd('/MezOn 3')
     else
-        mq.cmd('/mezon 0')
+        mq.cmd('/MezOn 0')
     end
 end
 
 local function ToggleUseAE(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable aeon 1')
+        mq.cmd('/togglevariable AEOn 1')
+        mq.cmd('/kasettings load ae 1')
+        print("USE AE ON")
     else
-        mq.cmd('/togglevariable aeon 0')
+        mq.cmd('/togglevariable AEOn 0')
+        mq.cmd('/kasettings load ae 1')
+        print("USE AE OFF")
     end
 end
 
 local function ToggleMelee(isChecked)
     if isChecked then
-        mq.cmd('/meleeon 1')
+        mq.cmd('/MeleeOn')
     else
-        mq.cmd('/meleeon 2')
+        mq.cmd('/MeleeOn')
     end
 end
 
 local function ToggleMedCombat(isChecked)
     if isChecked then
-        mq.cmd('/medcombat 1')
+        mq.cmd('/MedCombat 1')
     else
-        mq.cmd('/medcombat 2')
+        mq.cmd('/MedCombat 2')
     end
 end
 
 local function ToggleBuffs(isChecked)
     if isChecked then
-        mq.cmd('/buffson 1')
+        mq.cmd('/BuffsOn 1')
     else
-        mq.cmd('/buffson 0')
+        mq.cmd('/BuffsOn 0')
     end
 end
 
 local function ToggleRebuff(isChecked)
     if isChecked then
-        mq.cmd('/rebuffon 1')
+        mq.cmd('/RebuffOn 1')
     else
-        mq.cmd('/rebuffon 0')
+        mq.cmd('/RebuffOn 0')
     end
 end
 
 local function ToggleAutoFire(isChecked)
     if isChecked then
-        mq.cmd('/autofireon 1')
+        mq.cmd('/AutoFireOn 1')
     else
-        mq.cmd('/autofireon 0')
+        mq.cmd('/AutoFireOn 0')
     end
 end
 
 local function ToggleAutoRez(isChecked)
     if isChecked then
-        mq.cmd('/autorezon 1')
+        mq.cmd('/AutoRezon 1')
     else
-        mq.cmd('/autorezon 0')
+        mq.cmd('/AutoRezon 0')
     end
 end
 
 local function ToggleUsePet(isChecked)
     if isChecked then
-        mq.cmd('/peton 1')
+        mq.cmd('/PetOn on')
     else
-        mq.cmd('/peton 2')
+        mq.cmd('/PetOn off')
     end
 end
 
 local function TogglePetToys(isChecked)
     if isChecked then
-        mq.cmd('/PetToysOn 1')
+        mq.cmd('/PetToysOn on')
     else
-        mq.cmd('/PetToysOn 0')
+        mq.cmd('/PetToysOn off')
     end
 end
 
 local function ToggleScatter(isChecked)
     if isChecked then
-        mq.cmd('/scatteron 1')
+        mq.cmd('/togglevariable scatteron 1')
+        mq.cmd('/kasettings load')
+        print("Scatter On")
     else
-        mq.cmd('/scatteron 0')
+        mq.cmd('/togglevariable scatteron 0')
+        mq.cmd('/kasettings load')
+        print("Scatter Off")
     end
 end
 
 local function ToggleHeals(isChecked)
     if isChecked then
-        mq.cmd('/Healson 1')
+        mq.cmd('/HealsOn 1')
     else
-        mq.cmd('/Healson 0')
+        mq.cmd('/HealsOn 0')
     end
 end
 
 local function ToggleCampfire(isChecked)
     if isChecked then
-        mq.cmd('/campfire on')
+        mq.cmd('/togglevariable CampfireOn 1')
+        print("Making a campfire")
+        mq.cmd('/kasettings load')
     else
-        mq.cmd('/campfire off')
+        mq.cmd('/togglevariable CampfireOn 0')
+        print("Will NOT Make a Campfire")
+        mq.cmd('/kasettings load')
     end
 end
 
 local function ToggleGroupEscape(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable groupescapeon 1')
+        mq.cmd('/togglevariable GroupEscapeOn 1')
+        mq.cmd('/kasettings load')
+        print("Group Escape On")
     else
-        mq.cmd('/togglevariable groupescapeon 0')
+        mq.cmd('/togglevariable GroupEscapeOn 0')
+        mq.cmd('/kasettings load')
+        print("Group Escape Off")
     end
 end
 
 local function ToggleTwist(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable twiston 1')
+        mq.cmd('/togglevariable TwistOn 1')
+        mq.cmd('/kasettings load')
+        print("Twisting Out Of Combat")
     else
-        mq.cmd('/togglevariable twiston 0')
+        mq.cmd('/togglevariable TwistOn 0')
+        mq.cmd('/kasettings load')
+        print("Do NOT Twist Out of Combat")
     end
 end
 
 local function ToggleFaceMob(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable facemobon 1')
+        mq.cmd('/togglevariable FaceMobOn 1')
+        mq.cmd('/kasettings load melee 1')
+        print("Face Mob On")
     else
-        mq.cmd('/togglevariable facemobon 0')
+        mq.cmd('/togglevariable FaceMobOn 0')
+        mq.cmd('/kasettings load melee 1')
+        print("Face Mob Off")
     end
 end
 
 local function ToggleDebuffAll(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable debuffallon 1')
+        mq.cmd('/togglevariable DebuffAllOn 1')
+        mq.cmd('/kasettings load dps 1')
+        print("DeBuff All On")
     else
-        mq.cmd('/togglevariable debuffallon 0')
+        mq.cmd('/togglevariable DebuffAllOn 0')
+        mq.cmd('/kasettings load dps 1')
+        print("DeBuff All Off")
     end
 end
 
 local function ToggleXtarHeal(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable xtarheal 1')
+        mq.cmd('/togglevariable XTarHeal 1')
+        mq.cmd('/kasettings load heals 1')
+        print("Healing GRP and Xtar")
     else
-        mq.cmd('/togglevariable xtarheal 0')
+        mq.cmd('/togglevariable XTarHeal 0')
+        mq.cmd('/kasettings load heals 1')
+        print("Healing GRP ONLY")
     end
 end
 
 local function ToggleCure(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable cureson 1')
+        mq.cmd('/togglevariable CuresOn 1')
+        mq.cmd('/kasettings load cures 1')
+        print("Using Cure")
     else
-        mq.cmd('/togglevariable cureson 0')
+        mq.cmd('/togglevariable CuresOn 0')
+        mq.cmd('/kasettings load cures 1')
+        print("Not Using Cure")
     end
 end
 
 local function TogglePetShrink(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable petshrinkon 1')
+        mq.cmd('/togglevariable PetShrinkOn 1')
+        mq.cmd('/kasettings load Pet 1')
+        print("Shrink Pet On")
     else
-        mq.cmd('/togglevariable petshrinkon 0')
+        mq.cmd('/togglevariable PetShrinkOn 0')
+        mq.cmd('/kasettings load pet 1')
+        print("Shrink Pet Off")
     end
 end
 
 local function TogglePullTwist(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable pulltwiston 1')
+        mq.cmd('/togglevariable PullTwistOn 1')
+        mq.cmd('/kasettings load pull 1')
+        print("Pull With Twist On")
     else
-        mq.cmd('/togglevariable pulltwiston 0')
+        mq.cmd('/togglevariable PullTwistOn 0')
+        mq.cmd('/kasettings load pull 1')
+        print("Pull With Twist Off")
     end
 end
 
 local function ToggleChainPull(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable chainpull 1')
+        mq.cmd('/togglevariable ChainPull 1')
+        mq.cmd('/kasettings load pull 1')
+        print("Chain Pull On")
     else
-        mq.cmd('/togglevariable chainpull 0')
+        mq.cmd('/togglevariable ChainPull 0')
+        mq.cmd('/kasettings load pull 1')
+        print("Chain Pull Off")
     end
 end
 
 local function ToggleAutoHide(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable autohide 1')
+        mq.cmd('/togglevariable AutoHide 1')
+        mq.cmd('/kasettings load')
+        print("Auto Hide On")
     else
-        mq.cmd('/togglevariable autohide 0')
+        mq.cmd('/togglevariable AutoHide 0')
+        mq.cmd('/kasettings load')
+        print("Auto Hide Off")
     end
 end
 
 local function ToggleAggro(isChecked)
     if isChecked then
-        mq.cmd('/togglevariable aggroon 1')
+        mq.cmd('/togglevariable AggroOn 1')
+        mq.cmd('/kasettings load aggro')
+        print("Use INI Aggro Section On")
     else
-        mq.cmd('/togglevariable aggroon 0')
+        mq.cmd('/togglevariable AggroOn 0')
+        mq.cmd('/kasettings load aggro')
+        print("Use INI Aggro Section Off")
+
     end
 end
 
 local checkboxHandlers = {
+    ["BurnAllNamed"] = ToggleBurn,
+    ["AutoFireOn"] = ToggleAutoFire,
+    ["AEOn"] = ToggleUseAE,
+    ["MeleeOn"] = ToggleMelee,
     ["Single Mez"] = ToggleSingleMez,
-    Chase = ToggleChase,
-    ["Return to Camp"] = ToggleReturntoCamp,
-    Burn = ToggleBurn,
     ["AE Mez"] = ToggleAEMez,
-    ["Use AE"] = ToggleUseAE,
-    Melee = ToggleMelee,
-    ["Med Combat"] = ToggleMedCombat,
-    Buffs = ToggleBuffs,
-    Rebuff = ToggleRebuff,
-    ["Auto Fire"] = ToggleAutoFire,
-    ["Auto Rez"] = ToggleAutoRez,
-    ["Use Pet"] = ToggleUsePet,
-    ["Pet Toys"] = TogglePetToys,
-    Scatter = ToggleScatter,
-    Heals = ToggleHeals,
-    Campfire = ToggleCampfire,
-    ["Group Escape"] = ToggleGroupEscape,
-    Twist = ToggleTwist,
-    ["Face Mob"] = ToggleFaceMob,
-    ["Debuff All"] = ToggleDebuffAll,
-    ["Xtar Heal"] = ToggleXtarHeal,
-    Cure = ToggleCure,
-    ["Pet Shrink"] = TogglePetShrink,
-    ["Pull Twist"] = TogglePullTwist,
-    ["Chain Pull"] = ToggleChainPull,
-    ["Auto Hide"] = ToggleAutoHide,
-    Aggro = ToggleAggro
+    ["ReturnToCamp"] = ToggleReturntoCamp,
+    ["ChaseAssist"] = ToggleChase,
+    ["ChainPull"] = ToggleChainPull,
+    ["PullTwistOn"] = TogglePullTwist,
+    ["TwistOn"] = ToggleTwist,
+    ["FaceMobOn"] = ToggleFaceMob,
+    ["ScatterOn"] = ToggleScatter,
+    ["GroupEscapeOn"] = ToggleGroupEscape,
+    ["XTarHeal"] = ToggleXtarHeal,
+    ["HealsOn"] = ToggleHeals,
+    ["CuresOn"] = ToggleCure,
+    ["AutoRezOn"] = ToggleAutoRez,
+    ["DebuffAllOn"] = ToggleDebuffAll,
+    ["BuffsOn"] = ToggleBuffs,
+    ["RebuffOn"] = ToggleRebuff,
+    ["AutoHide"] = ToggleAutoHide,
+    ["MedCombat"] = ToggleMedCombat,
+    ["PetOn"] = ToggleUsePet,
+    ["PetToys"] = TogglePetToys,
+    ["PetShrinkOn"] = TogglePetShrink,
+    ["AggroOn"] = ToggleAggro,
+    ["CampfireOn"] = ToggleCampfire
 }
 
 return checkboxHandlers
