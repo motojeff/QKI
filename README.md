@@ -1,3 +1,6 @@
+Updated With QKI2 See RG Lua area for details for now as i have not the time to update this text. 
+
+
 # QKI
 Quicky Kiss It is a lua script for use with kissassist. 
 
